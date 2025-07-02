@@ -98,7 +98,7 @@ wget https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/
 ## 10. Run Your First LLM Chat
 
 ```sh
-./build/bin/main -m models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf --color -c 2048 -t 4 --temp 0.7 --interactive
+./build/bin/llama-cli -m models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf --color -c 2048 -t 4 --temp 0.7 --interactive
 ```
 - `-m`: Path to your GGUF model file.
 - `-c 2048`: Context window (can lower if you run out of VRAM).
