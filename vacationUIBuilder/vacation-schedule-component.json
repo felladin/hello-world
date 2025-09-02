@@ -1,0 +1,45 @@
+{
+  "name": "vacation-schedule-overview",
+  "label": "Vacation Schedule Overview",
+  "description": "Interactive vacation schedule with user management and color-coded calendar view",
+  "version": "1.0.0",
+  "author": "felladin",
+  "created": "2025-08-21 08:29:03",
+  "category": "workspace",
+  "dependencies": [
+    "@servicenow/ui-component",
+    "@servicenow/ui-core"
+  ],
+  "properties": {
+    "title": {
+      "label": "Block Title",
+      "type": "string",
+      "default": "Team Vacation Schedule"
+    },
+    "maxUsersToShow": {
+      "label": "Maximum Users to Display",
+      "type": "number",
+      "default": 20
+    },
+    "defaultViewMode": {
+      "label": "Default View Mode",
+      "type": "choice",
+      "choices": [
+        {"label": "Month", "value": "month"},
+        {"label": "Quarter", "value": "quarter"},
+        {"label": "Year", "value": "year"}
+      ],
+      "default": "month"
+    },
+    "allowUserSelfService": {
+      "label": "Allow Users to Add Their Own Vacation",
+      "type": "boolean",
+      "default": true
+    },
+    "restrictToUserGroups": {
+      "label": "Restrict to Specific Groups (comma-separated sys_ids)",
+      "type": "string",
+      "default": ""
+    }
+  }
+}
