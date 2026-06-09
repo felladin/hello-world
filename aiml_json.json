@@ -1,0 +1,218 @@
+{
+  "computeResource": [
+    {
+      "type": "calculation",
+      "name": "normal datascience",
+      "useCase": "dataScience",
+      "computeResource": {
+        "cpu": {
+          "requests": "1",
+          "limit": "4"
+        },
+        "memory": {
+          "requests": "128Mi",
+          "limit": "64Gi"
+        },
+        "maxPods": 20,
+        "maxPVC": 15
+      },
+      "LimitRange": {
+        "pod": {
+          "cpu": {
+            "max": "1",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "16Gi",
+            "min": "2Gi"
+          }
+        },
+        "container": {
+          "cpu": {
+            "max": "1",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "16Gi",
+            "min": "2Gi"
+          }
+        }
+      }
+    },
+    {
+      "type": "calculation",
+      "name": "Stor datascience",
+      "useCase": "dataScience",
+      "computeResource": {
+        "cpu": {
+          "requests": "1",
+          "limit": "4"
+        },
+        "memory": {
+          "requests": "128Mi",
+          "limit": "128Gi"
+        },
+        "maxPods": 30,
+        "maxPVC": 21
+      },
+      "LimitRange": {
+        "pod": {
+          "cpu": {
+            "max": "2",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "64Gi",
+            "min": "2Gi"
+          }
+        },
+        "container": {
+          "cpu": {
+            "max": "2",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "64Gi",
+            "min": "2Gi"
+          }
+        }
+      }
+    },
+    {
+      "type": "calculation",
+      "name": "normal analys",
+      "useCase": "analys",
+      "computeResource": {
+        "cpu": {
+          "requests": "1",
+          "limit": "4"
+        },
+        "memory": {
+          "requests": "128Mi",
+          "limit": "128Gi"
+        },
+        "maxPods": 30,
+        "maxPVC": 21
+      },
+      "LimitRange": {
+        "pod": {
+          "cpu": {
+            "max": "2",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "16Gi",
+            "min": "2Gi"
+          }
+        },
+        "container": {
+          "cpu": {
+            "max": "2",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "16Gi",
+            "min": "2Gi"
+          }
+        }
+      }
+    },
+    {
+      "type": "calculation",
+      "name": "Stor analys",
+      "useCase": "analys",
+      "computeResource": {
+        "cpu": {
+          "requests": "1",
+          "limit": "4"
+        },
+        "memory": {
+          "requests": "128Mi",
+          "limit": "128Gi"
+        },
+        "maxPods": 30,
+        "maxPVC": 21
+      },
+      "LimitRange": {
+        "pod": {
+          "cpu": {
+            "max": "2",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "64Gi",
+            "min": "2Gi"
+          }
+        },
+        "container": {
+          "cpu": {
+            "max": "2",
+            "min": "0.1"
+          },
+          "memory": {
+            "max": "64Gi",
+            "min": "2Gi"
+          }
+        }
+      }
+    }
+  ],
+  "storage": [
+    {
+      "type": "storage",
+      "name": "normal datascience",
+      "useCase": "dataScience",
+      "requests": {
+        "storage": "200Gi",
+        "ephemeral-storage": "10Gi"
+      },
+      "limit": {
+        "ephemeral-storage": "20Gi"
+      }
+    },
+    {
+      "type": "storage",
+      "name": "Stor datascience",
+      "useCase": "dataScience",
+      "requests": {
+        "storage": "400Gi",
+        "ephemeral-storage": "20Gi"
+      },
+      "limit": {
+        "ephemeral-storage": "40Gi"
+      }
+    },
+    {
+      "type": "storage",
+      "name": "Jättestor datascience",
+      "useCase": "dataScience",
+      "requests": {
+        "storage": "700Gi"
+      }
+    },
+    {
+      "type": "storage",
+      "name": "normal analys",
+      "useCase": "analys",
+      "requests": {
+        "storage": "200Gi",
+        "ephemeral-storage": "10Gi"
+      },
+      "limit": {
+        "ephemeral-storage": "20Gi"
+      }
+    },
+    {
+      "type": "storage",
+      "name": "Stor analys",
+      "useCase": "analys",
+      "requests": {
+        "storage": "400Gi",
+        "ephemeral-storage": "20Gi"
+      },
+      "limit": {
+        "ephemeral-storage": "50Gi"
+      }
+    }
+  ]
+}
